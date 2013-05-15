@@ -11,9 +11,16 @@ define('DBUG_P_BACKTRACE', 'debug_print_backtrace');
 /**
  * Custom debug function : Usual and classic debugging function.
  *
- * @param null $obj Variable to debug
+ * @param mixed $obj Variable to debug
  * @param bool $end Set to TRUE to terminate function
  * @param string $method Debug method
+ *  - DBUG_EXPORT : var_export
+ *  - DBUG_DUMP : var_dump
+ *  - DBUG_PRINT : print_r
+ *  - DBUG_WATCHDOG : watchdog
+ *  - DBUG_KEYS : array_keys
+ *  - DBUG_BACKTRACE : debug_backtrace
+ *  - DBUG_P_BACKTRACE : debug_print_backtrace
  *
  * @TODO Make Doc
  *
@@ -58,3 +65,5 @@ function dbug ($obj = NULL, $end = TRUE, $method = DBUG_PRINT) {
     exit (0);
   }
 }
+
+dbug()
