@@ -20,7 +20,7 @@ define('DBUG_P_BACKTRACE', 'debug_print_backtrace');
  *  - DBUG_WATCHDOG : watchdog
  *  - DBUG_KEYS : array_keys
  *
- * @TODO Make Doc
+ * @TODO Improve Documentation
  *
  */
 function dbug ($obj = NULL, $end = TRUE, $method = DBUG_PRINT) {
@@ -41,27 +41,32 @@ function dbug ($obj = NULL, $end = TRUE, $method = DBUG_PRINT) {
       // Ouput with the giving method.
       $method ($obj);
     }
-    print('</pre>');
+    print ('</pre>');
 
     // Die... not Today !
-    if ($end || is_null($end)) {
+    if ($end || is_null ($end)) {
       exit (0);
     }
   }
 }
 
 /**
+ * An extra debug function to show backtrace informations
+ *
  * @param string $method
  *  - DBUG_BACKTRACE : debug_backtrace
  *  - DBUG_P_BACKTRACE : debug_print_backtrace
  * Don't hesitated to try function why DBUG_P_BACKTRACE parameter
+ *
+ * @TODO Improve Documentation
+ * 
  */
 function dback ($method = DBUG_BACKTRACE) {
 
   // Output.
   print ('<pre>');
   print_r ($method(DEBUG_BACKTRACE_IGNORE_ARGS));
-  print('</pre>');
+  print ('</pre>');
 
   // Exit.
   exit (0);
