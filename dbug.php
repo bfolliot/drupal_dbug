@@ -1,5 +1,9 @@
 <?php
 
+// The Default debugging function, feel free to pickup your favorite one!
+define('DBUG_DEFAULT', 'print_r');
+
+// Common debug function
 define('DBUG_EXPORT', 'var_export');
 define('DBUG_DUMP', 'var_dump');
 define('DBUG_PRINT', 'print_r');
@@ -14,6 +18,7 @@ define('DBUG_P_BACKTRACE', 'debug_print_backtrace');
  * @param mixed $obj Variable to debug
  * @param bool $end Set to TRUE to terminate function
  * @param string $method Debug method
+ *  - DBUG_DEFAULT : Default debugging function
  *  - DBUG_EXPORT : var_export
  *  - DBUG_DUMP : var_dump
  *  - DBUG_PRINT : print_r
@@ -23,7 +28,7 @@ define('DBUG_P_BACKTRACE', 'debug_print_backtrace');
  * @TODO Improve Documentation
  *
  */
-function dbug ($obj = NULL, $end = TRUE, $method = DBUG_PRINT) {
+function dbug ($obj = NULL, $end = TRUE, $method = DBUG_DEFAULT) {
 
   // Watchdog method : no die().
   if ($method == DBUG_WATCHDOG) {
