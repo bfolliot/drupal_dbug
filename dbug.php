@@ -50,7 +50,7 @@ function dbug ($obj = NULL, $end = TRUE, $method = DBUG_DEFAULT) {
 
     // Die... not Today !
     if ($end || is_null ($end)) {
-      exit (0);
+      exit;
     }
   }
 }
@@ -74,5 +74,5 @@ function dback ($method = DBUG_BACKTRACE) {
   print ('</pre>');
 
   // Exit.
-  exit (0);
+  exit;
 }
