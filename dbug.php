@@ -1,8 +1,5 @@
 <?php
 
-// The Default debugging function, feel free to pickup your favorite one!
-define('DBUG_DEFAULT', 'print_r');
-
 // Common debug function
 define('DBUG_EXPORT', 'var_export');
 define('DBUG_DUMP', 'var_dump');
@@ -11,6 +8,9 @@ define('DBUG_WATCHDOG', 'watchdog');
 define('DBUG_KEYS', 'array_keys');
 define('DBUG_BACKTRACE', 'debug_backtrace');
 define('DBUG_P_BACKTRACE', 'debug_print_backtrace');
+
+// The Default debugging function, feel free to pickup your favorite one!
+define('DBUG_DEFAULT', DBUG_PRINT);
 
 /**
  * Custom debug function : Usual and classic debugging function.
